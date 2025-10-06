@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess Table</title>
+    <style>
+        .board {
+            border-collapse: collapse;
+            border: 16px solid #E8A93B;   /* viền vàng quanh bàn cờ */
+            margin: 24px auto;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .board td {
+            width: 56px; height: 56px;     /* kích thước mỗi ô */
+        }
+        /* Ô chứa nhãn A–H, 1–8 */
+        .label {
+            background: #E8A93B;
+            color: #000;
+            font-weight: 700;
+            width: 32px;                   /* hẹp hơn một chút cũng được */
+        }
+        /* Các ô chơi cờ (64 ô) mặc định trắng */
+        .square { background: #fff; }
+
+        /* Tô ô đen theo quy luật xen kẽ (bỏ qua hàng/ cột nhãn) */
+        tr:nth-child(odd)  .square:nth-child(even),
+        tr:nth-child(even) .square:nth-child(odd) { background: #000; }
+    </style>
+</head>
+<body>
+
+<table class="board">
+    <!-- Hàng nhãn trên cùng -->
+    <tr>
+        <td class="label"></td>
+        <td class="label">1</td><td class="label">2</td><td class="label">3</td><td class="label">4</td>
+        <td class="label">5</td><td class="label">6</td><td class="label">7</td><td class="label">8</td>
+    </tr>
+
+    <!-- A -->
+    <tr>
+        <td class="label">A</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- B -->
+    <tr>
+        <td class="label">B</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- C -->
+    <tr>
+        <td class="label">C</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- D -->
+    <tr>
+        <td class="label">D</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- E -->
+    <tr>
+        <td class="label">E</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- F -->
+    <tr>
+        <td class="label">F</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- G -->
+    <tr>
+        <td class="label">G</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+    <!-- H -->
+    <tr>
+        <td class="label">H</td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+        <td class="square"></td><td class="square"></td><td class="square"></td><td class="square"></td>
+    </tr>
+</table>
+
+</body>
+</html>

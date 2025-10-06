@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch tháng 10/2009</title>
+    <style>
+        body{font-family: Arial, Helvetica, sans-serif;}
+
+        .calendar{
+            width: 900px;
+            margin: 24px auto;
+            border-collapse: collapse;
+            table-layout: fixed;           /* đảm bảo 7 cột bằng nhau, nằm ngang */
+        }
+
+        caption{
+            font-size: 32px; font-weight: 700; color:#1160ff; margin: 8px 0 18px;
+        }
+
+        /* Mặc định cho ô */
+        th, td{
+            border: 2px solid #cfcfcf;
+            width: calc(100%/7);
+            height: 95px;
+            padding: 0;
+            background:#fff;
+            position: relative;            /* để đặt số nhỏ góc phải */
+            text-align: center;
+            vertical-align: middle;        /* giữ nội dung giữa theo chiều dọc */
+        }
+
+        /* Hàng tiêu đề tiếng Việt (ô màu) */
+        .dow-vi th{
+            height: 46px; background:#f6b13b; color:#fff; border-color:#f0f0f0;
+            font-size: 18px; font-weight:700; letter-spacing:.3px;
+        }
+        .sun-vi{background:#e44c2a !important;}
+        .sat-vi{background:#1f5bff !important;}
+
+        /* Hàng tiêu đề tiếng Anh (màu chữ) */
+        .dow-en th{
+            height: 34px; border:none; background:#fff; color:#999; font-size:18px; font-weight:600;
+        }
+        .dow-en .sun{color:#e44c2a;}
+        .dow-en .sat{color:#1f5bff;}
+
+        /* Màu số theo thứ */
+        .sun{color:#e44c2a;}
+        .sat{color:#1f5bff;}
+
+        /* Số lớn ở giữa ô */
+        .cell{
+            display:grid; place-items:center;     /* canh giữa ngang + dọc */
+            height:100%;
+            font-size:28px; line-height:1;
+        }
+
+        /* Số nhỏ ở dưới góc phải */
+        .sub{
+            position:absolute; right:6px; bottom:6px;
+            font-size:14px; color:#777; font-weight:600;
+        }
+
+        .blank{background:#fff;} /* ô trống đầu tháng */
+    </style>
+</head>
+<body>
+
+<table class="calendar" aria-label="Lịch tháng 10 năm 2009">
+    <caption>Tháng 10 - October</caption>
+
+    <!-- Tiêu đề tiếng Việt -->
+    <tr class="dow-vi">
+        <th class="sun-vi">C.Nhật</th>
+        <th>T.Hai</th><th>T.Ba</th><th>T.Tư</th><th>T.Năm</th><th>T.Sáu</th>
+        <th class="sat-vi">T.Bảy</th>
+    </tr>
+    <!-- Tiêu đề tiếng Anh -->
+    <tr class="dow-en">
+        <th class="sun">Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th class="sat">Sat</th>
+    </tr>
+
+    <!-- Tuần 1 (Oct 1 là Thu) -->
+    <tr>
+        <td class="blank"></td><td class="blank"></td><td class="blank"></td><td class="blank"></td>
+        <td><div class="cell">1</div><span class="sub">13</span></td>
+        <td><div class="cell">2</div><span class="sub">14</span></td>
+        <td class="sat"><div class="cell">3</div><span class="sub">15</span></td>
+    </tr>
+
+    <!-- Tuần 2 -->
+    <tr>
+        <td class="sun"><div class="cell">4</div><span class="sub">16</span></td>
+        <td><div class="cell">5</div><span class="sub">17</span></td>
+        <td><div class="cell">6</div><span class="sub">18</span></td>
+        <td><div class="cell">7</div><span class="sub">19</span></td>
+        <td><div class="cell">8</div><span class="sub">20</span></td>
+        <td><div class="cell">9</div><span class="sub">21</span></td>
+        <td class="sat"><div class="cell">10</div><span class="sub">22</span></td>
+    </tr>
+
+    <!-- Tuần 3 -->
+    <tr>
+        <td class="sun"><div class="cell">11</div><span class="sub">23</span></td>
+        <td><div class="cell">12</div><span class="sub">24</span></td>
+        <td><div class="cell">13</div><span class="sub">25</span></td>
+        <td><div class="cell">14</div><span class="sub">26</span></td>
+        <td><div class="cell">15</div><span class="sub">27</span></td>
+        <td><div class="cell">16</div><span class="sub">28</span></td>
+        <td class="sat"><div class="cell">17</div><span class="sub">29</span></td>
+    </tr>
+
+    <!-- Tuần 4 -->
+    <tr>
+        <td class="sun"><div class="cell">18</div><span class="sub">1,9</span></td>
+        <td><div class="cell">19</div><span class="sub">2</span></td>
+        <td><div class="cell">20</div><span class="sub">3</span></td>
+        <td><div class="cell">21</div><span class="sub">4</span></td>
+        <td><div class="cell">22</div><span class="sub">5</span></td>
+        <td><div class="cell">23</div><span class="sub">6</span></td>
+        <td class="sat"><div class="cell">24</div><span class="sub">7</span></td>
+    </tr>
+
+    <!-- Tuần 5 -->
+    <tr>
+        <td class="sun"><div class="cell">25</div><span class="sub">8</span></td>
+        <td><div class="cell">26</div><span class="sub">9</span></td>
+        <td><div class="cell">27</div><span class="sub">10</span></td>
+        <td><div class="cell">28</div><span class="sub">11</span></td>
+        <td><div class="cell">29</div><span class="sub">12</span></td>
+        <td><div class="cell">30</div><span class="sub">13</span></td>
+        <td class="sat"><div class="cell">31</div><span class="sub">14</span></td>
+    </tr>
+</table>
+
+</body>
+</html>
